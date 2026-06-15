@@ -111,7 +111,6 @@ body {
   opacity: 0.9;
 }
 
-/* Context menu */
 #context-menu {
   position: absolute;
   background: #ffffffee;
@@ -125,13 +124,16 @@ body {
 
 #context-menu.hidden { display: none; }
 
-#context-quit {
+#context-menu > div {
   padding: 6px 10px;
   cursor: pointer;
   border-radius: 4px;
+  transition: background 150ms ease;
 }
 
-#context-quit:hover { background: rgba(0,0,0,0.06); }
+#context-menu > div:hover { 
+  background: rgba(0,0,0,0.08); 
+}
 
 #speech {
   position: absolute;
@@ -165,4 +167,47 @@ body {
   50% {
     transform: translateY(-4px) scaleY(1.03);
   }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) scaleY(1);
+  }
+  25% {
+    transform: translateY(-20px) scaleY(0.95);
+  }
+  50% {
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes eye-roll {
+  0%, 100% {
+    transform: rotate(0deg) scaleX(1);
+  }
+  50% {
+    transform: rotate(-3deg) scaleX(1.05);
+  }
+}
+
+/* New mood states */
+.mood-lonely #body {
+  background: #d8a8e8;
+  filter: saturate(0.7) brightness(0.95);
+  opacity: 0.85;
+}
+
+.mood-excited #body {
+  background: #ffd700;
+  filter: saturate(1.2) brightness(1.1);
+  animation: bounce 0.4s ease-in-out;
 }
