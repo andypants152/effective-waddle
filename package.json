@@ -1,0 +1,24 @@
+{
+  "name": "effective-waddle",
+  "version": "0.1.0",
+  "description": "a tiny desktop pet",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andypants152/effective-waddle.git"
+  },
+  "keywords": [],
+  "author": "AndyPants",
+  "license": "CC0-1.0",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/andypants152/effective-waddle/issues"
+  },
+  "homepage": "https://github.com/andypants152/effective-waddle#readme",
+  "devDependencies": {
+    "electron": "^42.4.0"
+  }
+}
