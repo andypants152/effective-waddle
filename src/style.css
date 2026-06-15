@@ -66,6 +66,73 @@ body {
   color: #261811;
 }
 
+.eye {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 8px;
+  background: #261811;
+  border-radius: 50%;
+  vertical-align: middle;
+  transition: height 120ms ease, transform 120ms ease, opacity 120ms ease;
+}
+
+.eye.blink {
+  height: 3px;
+  transform: translateY(4px);
+}
+
+.mouth {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  margin: 0 2px;
+}
+
+/* Mood states */
+.mood-sleepy #body {
+  background: #caaec9;
+  filter: saturate(0.9);
+}
+
+.mood-annoyed #body {
+  background: #e06a3a;
+  transform: rotate(-2deg);
+}
+
+.mood-happy #body {
+  background: #f4b56a;
+  transform: scale(1.02);
+}
+
+/* Sleeping state */
+.sleeping .eye {
+  height: 3px;
+  opacity: 0.9;
+}
+
+/* Context menu */
+#context-menu {
+  position: absolute;
+  background: #ffffffee;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  padding: 6px 8px;
+  font: 13px/1 system-ui, sans-serif;
+  pointer-events: auto;
+  z-index: 9999;
+}
+
+#context-menu.hidden { display: none; }
+
+#context-quit {
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#context-quit:hover { background: rgba(0,0,0,0.06); }
+
 #speech {
   position: absolute;
   left: -25px;
